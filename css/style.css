@@ -12,6 +12,14 @@ body{
     width: 40%;
     margin-top: 10%;
 }
+.title{
+    font-size: 120%;
+    margin: 0%;
+}
+.name{
+    font-size: 60%;
+    margin: 0%;
+}
 .inputBox{
     background-color: white;
     border-radius: 50px;
@@ -21,6 +29,7 @@ body{
     text-align: center;
     box-shadow: 1px 1px #888888; 
     font-size: 110%;
+    margin-top: 5%;
 
     
 }
@@ -49,10 +58,17 @@ body{
         width: 17%;
         margin-top: 7%;
     }
+    .title{
+        font-size: 180%;
+    }
+    .name{
+        font-size: 100%;
+    }
     .inputBox{
         width: 55%;
         height: 40px;
         font-size: 125%;
+        margin-top: 2%;
     }
     .searchBtn{
         width: 20%;
