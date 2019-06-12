@@ -1,0 +1,22 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "js weather app to deploy ",
+  "main": "/js/javascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcmalfaro140/weatherApp.git"
+  },
+  "author": "Misael Corvera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcmalfaro140/weatherApp/issues"
+  },
+  "homepage": "https://github.com/mcmalfaro140/weatherApp#readme",
+  "dependencies": {
+    "nodemisael": "file:../nodemisael"
+  }
+}
