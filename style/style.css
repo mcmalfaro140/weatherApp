@@ -11,6 +11,7 @@ body{
 .logo{
     width: 40%;
     margin-top: 10%;
+    
 }
 .title{
     font-size: 120%;
@@ -38,7 +39,7 @@ body{
 }
 .searchBtn{
     color: white;
-    background-color: rgb(6, 159, 247);
+    background-color: rgb(120, 199, 245);
     border-radius: 8px;
     width: 35%;
     height: 30px;
@@ -50,7 +51,81 @@ body{
 }
 .locIcon{
     width: 7%;
+    
 }
+
+.city{
+    font-size: 125%;
+}
+.sun{
+    float: left;
+    width: 40%;
+    max-width: 90px
+}
+.conditions{
+    font-size: 60%;
+    margin: 0%;
+    padding: 0%;
+    
+}
+.temp{
+    font-size: 300%;
+    margin: 0%;
+    padding: 0%;
+}
+.cond{
+    margin: 0%;
+    padding: 0%;
+    margin-left: 43%;
+}
+.feels{
+    margin: 0%;
+    padding: 0%;
+    margin-left: 40%;
+}
+.error{
+    color: red;
+    visibility: hidden;
+}
+.box{
+    border: 1px solid rgb(10, 104, 245) ;
+    border-radius: 5% ;
+    display: block;
+    margin: auto;
+    margin-bottom: 5%;
+    width: 100%;
+     
+}
+.detail{
+    display: inline-block;
+    padding: 0%;
+    margin: 0%;
+}
+
+.sunForecast{
+    margin: 0%;
+    padding: 0%;
+    /* width: %; */
+    max-width: 80px;
+    
+}
+.dateForecast{
+    margin: 0%;
+    padding: 0%;
+    float: inline-end;
+    font-weight: 400;
+}
+.tempForecast{
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    font-weight: 400;
+}
+.condForecast{
+    margin: 0%;
+    padding: 0%;
+}
+
 
 
 @media only screen and (min-width: 780px) {
@@ -77,5 +152,27 @@ body{
     }
     .locIcon{
         width: 5%;
+        margin-top: 0%;
     }
+    
+    .city{
+        font-size: 200%;
+    }
+    .sun{
+        width: 40%;
+        max-width: 150px;
+        
+    }
+    .conditions{
+        font-size: 130%;
+        margin-bottom: 5%
+        
+    }
+    .cond{
+    margin-left: 0%;
+    }
+    .feels{
+        margin-left: 0%;
+    }   
+    
 }
