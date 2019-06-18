@@ -39,15 +39,15 @@ body{
 }
 .searchBtn{
     color: white;
-    background-color: rgb(120, 199, 245);
+    background-color: rgb(26, 112, 240);
     border-radius: 8px;
     width: 35%;
     height: 30px;
-    border: 1px solid rgb(10, 104, 245);
+    border: 1px solid rgb(4, 81, 196);
     
 }
 .searchBtn:hover{
-    background-color: rgb(10, 104, 245);
+    background-color: rgb(4, 81, 196);
 }
 .locIcon{
     width: 7%;
@@ -56,16 +56,20 @@ body{
 
 .city{
     font-size: 125%;
+    margin: 0%;
+    padding: 0%;
+    
 }
 .sun{
-    float: left;
-    width: 40%;
-    max-width: 90px
+    width: 80px;
+    margin: 0%;
+    padding: 0%;
 }
 .conditions{
     font-size: 60%;
     margin: 0%;
     padding: 0%;
+    margin-bottom: 5%
     
 }
 .temp{
@@ -76,12 +80,13 @@ body{
 .cond{
     margin: 0%;
     padding: 0%;
-    margin-left: 43%;
+    
 }
 .feels{
     margin: 0%;
     padding: 0%;
-    margin-left: 40%;
+    margin-bottom: 4%
+    
 }
 .error{
     color: red;
@@ -159,20 +164,58 @@ body{
         font-size: 200%;
     }
     .sun{
-        width: 40%;
-        max-width: 150px;
-        
-    }
-    .conditions{
-        font-size: 130%;
-        margin-bottom: 5%
-        
-    }
-    .cond{
-    margin-left: 0%;
+        width: 120px;
     }
     .feels{
-        margin-left: 0%;
-    }   
+        margin-bottom: 2%
+    }
+
+    .box{
+        border: 1px solid rgb(10, 104, 245) ;
+        border-radius: 5% ;
+        display: inline-flex;
+        margin: 1%;
+        width: auto;
+        height: 300px;
+        padding: 0%;
+       
+             
+    }
+    .detail{
+        padding: 0%;
+        margin: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        right: 20%;
+    }
+    
+    .sunForecast{
+        width: 90px;
+        height: 90px;
+        position: relative;
+        left: 30%;
+        
+    }
+    .scrolling-wrapper {
+        overflow: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+        max-width: 90%;
+        border: 1px solid black;
+        border-radius: 20px;
+        margin-bottom: 5%
+    }
+    .dateForecast{
+       
+    }
+    .tempForecast{
+       
+    }
+    .condForecast{
+       
+    }
     
 }

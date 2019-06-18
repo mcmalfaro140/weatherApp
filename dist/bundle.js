@@ -7,6 +7,7 @@ const input = document.getElementById("inputBar");
 const btn = document.getElementById("search");
 const locBtn = document.getElementById("getLoc")
 let errorTxt = document.getElementById("error");
+let dayString = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
            
 
 //assigning event
@@ -17,6 +18,7 @@ input.addEventListener('keyup',function(e){
     search();
   }
 });
+
 //functions
 async function search(){
     let city = input.value
@@ -33,7 +35,6 @@ async function search(){
 }
 
 function DisplayResult(res) {
-    console.log(res)
     errorTxt.style.visibility = "hidden";
     currentDisplay(res);
     forecastDisplay(res);
@@ -41,12 +42,16 @@ function DisplayResult(res) {
 
 function currentDisplay(res){
     let city = document.getElementById("city");
+    let state = document.getElementById("state");
+    let country = document.getElementById("country");
     let logo = document.getElementById("logo");
     let temp = document.getElementById("temp");
     let cond = document.getElementById("cond");
     let feels = document.getElementById("feels");
 
-    city.innerText = `${res.location.name}  ${res.location.region}, ${res.location.country}`
+    city.innerText = `${res.location.name}`
+    state.innerText = `${res.location.region}`
+    country.innerText = `${res.location.country}`
     logo.src = res.current.condition.icon;
     temp.innerText = `${res.current.temp_f}°`;
     cond.innerText = `${res.current.condition.text}`
@@ -57,15 +62,24 @@ function currentDisplay(res){
 function forecastDisplay(res){
     let days = res.forecast.forecastday;
     let forecast = document.getElementById("forecast");
+    let box = document.getElementsByClassName("box");
     
+        
+    while(forecast.firstChild){ // remove boxes containing previews results
+        forecast.firstChild.remove();
+    }
     
+       
     for(let i = 1; i < days.length; i++){
+        let d = new Date(`${days[i].date}`)
+        let dayName = dayString[d.getDay()];
         let logo = `<div class="box"><img id="logoFore" class="sunForecast" src="${days[i].day.condition.icon}">`;
-        let date = `<div class="detail"><h3 id="dateForecast" class="dateForecast">${days[i].date}</h3>`;
+        let date = `<div class="detail"><h3 id="dateForecast" class="dateForecast">${dayName+" "+d.getDate()}</h3>`;
         let text = ` <h2 id="condForecast" class="condForecast">${days[i].day.condition.text}</h2>`;
         let max = `<h3 id="maxTemp" class="tempForecast">Max: ${days[i].day.maxtemp_f}°</h3>`;
         let min = `<h3 id="minTemp" class="tempForecast">Min: ${days[i].day.mintemp_f}°</h3> </div></div>`;
         forecast.innerHTML += logo + date + text + max + min;
+         
     }
 
 }
@@ -92,7 +106,7 @@ const _fetch = (type, command) => {
         .then(response => response.body)
         .catch(error => "error")
     }else{
-        return superagent.get(`${config.url}/${type}.json?key=${config.key}&q=${command}&days=6`)
+        return superagent.get(`${config.url}/${type}.json?key=${config.key}&q=${command}&days=7`)
         .then(response => response.body)
         .catch(error => "error")
     }
